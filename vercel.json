@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "buildCommand": "yarn build",
-  "devCommand": "yarn dev",
-  "outputDirectory": ".",
+  "builds": [
+    {
+      "src": "dist/server.js",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["dist/**"] }
+    }
+  ],
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/(.*)",
       "dest": "dist/server.js"
-    },
-    {
-      "src": "/admin/(.*)",
-      "dest": "build/index.html"
     }
   ]
 }
