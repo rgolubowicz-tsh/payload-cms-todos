@@ -1,28 +1,29 @@
 {
-  "name": "vercel-typescript-express-api",
   "version": 2,
-  "public": true,
   "builds": [
     {
-      "src": "src/server.ts",
+      "src": "dist/server.js",
       "use": "@vercel/node",
-      "config": {
-        "includeFiles": ["src/payload.config.ts"]
-      }
+      "config": { "includeFiles": ["dist/**"] }
+    },
+    {
+      "src": "build/**",
+      "use": "@vercel/static",
+      "config": { "includeFiles": ["build/**"] }
     }
   ],
   "routes": [
     {
-      "src": "/robots.txt",
-      "status": 204
+      "src": "/api/(.*)",
+      "dest": "dist/server.js"
     },
     {
-      "src": "/favicon.ico",
-      "status": 204
+      "src": "/",
+      "dest": "build/index.html"
     },
     {
-      "src": "/(.*)",
-      "dest": "/src/server.ts"
+      "src": "/(.+)",
+      "dest": "build/$1"
     }
   ]
 }
