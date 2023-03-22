@@ -1,21 +1,19 @@
-import { buildConfig } from 'payload/config';
-import path from 'path';
-import TodoLists from './collections/TodoLists';
-import Users from './collections/Users';
+import { buildConfig } from "payload/config";
+import path from "path";
+import TodoLists from "./collections/TodoLists";
+import Users from "./collections/Users";
 
 export default buildConfig({
-  serverURL: 'http://localhost:3000',
+  // serverURL: "https://render-payload-cms.onrender.com",
   admin: {
     user: Users.slug,
   },
-  collections: [
-    TodoLists,
-    Users,
-  ],
+  cors: "*",
+  collections: [TodoLists, Users],
   typescript: {
-    outputFile: path.resolve(__dirname, 'payload-types.ts')
+    outputFile: path.resolve(__dirname, "payload-types.ts"),
   },
   graphQL: {
-    schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
+    schemaOutputFile: path.resolve(__dirname, "generated-schema.graphql"),
   },
 });
