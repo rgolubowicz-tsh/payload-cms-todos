@@ -2,14 +2,9 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/server.js",
+      "src": "src/server.ts",
       "use": "@vercel/node",
-      "config": { "includeFiles": ["dist/**"] }
-    },
-    {
-      "src": "build/**",
-      "use": "@vercel/static",
-      "config": { "includeFiles": ["build/**"] }
+      "config": { "includeFiles": ["src/payload.config.ts"] }
     }
   ],
   "routes": [
