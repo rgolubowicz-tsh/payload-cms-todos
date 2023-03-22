@@ -1,0 +1,8 @@
+previewsEnabled: true
+services:
+  - type: web
+    name: render-payload-cms
+    env: docker
+    envVars:
+      - fromGroup: app-prod
+        previewValue: app-preview
