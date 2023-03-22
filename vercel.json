@@ -3,12 +3,6 @@
   "buildCommand": "yarn build",
   "devCommand": "yarn dev",
   "outputDirectory": ".",
-  "builds": [
-    {
-      "src": "dist/index.js",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
       "src": "/api/(.*)",
