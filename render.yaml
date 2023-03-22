@@ -1,6 +1,6 @@
-previewsEnabled: true
 services:
   - type: web
+    previewsEnabled: true
     name: render-payload-cms
     env: docker
     envVars:
