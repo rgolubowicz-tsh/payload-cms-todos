@@ -6,6 +6,14 @@
       "dest": "dist/server.js"
     },
     {
+      "src": "/admin",
+      "dest": "build/index.html"
+    },
+    {
+      "src": "/admin/:path",
+      "dest": "build/:path"
+    },
+    {
       "src": "/",
       "dest": "build/index.html"
     },
