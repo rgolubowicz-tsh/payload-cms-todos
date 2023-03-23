@@ -2,7 +2,7 @@
   "name": "rg-test-project",
   "description": "Payload project created from todo template",
   "version": "1.0.0",
-  "main": "dist/api/index.js",
+  "main": "dist/server.js",
   "license": "MIT",
   "scripts": {
     "dev": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts nodemon",
