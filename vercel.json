@@ -11,6 +11,11 @@
     },
     { "source": "/(.*)", "destination": "/api" }
   ],
+  "functions": {
+    "api/index.ts": {
+      "includeFiles": "build/**"
+    }
+  },
   "outputDirectory": "build",
   "buildCommand": "yarn build"
 }
