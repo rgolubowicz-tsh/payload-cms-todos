@@ -1,8 +1,13 @@
 {
   "version": 2,
   "builds": [
-    { "src": "src/api/index.ts", "use": "@vercel/node" },
-    { "src": "src/payload.config.ts", "use": "@vercel/node" }
+    {
+      "src": "src/server.ts",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["src/payload.config.ts"]
+      }
+    }
   ],
-  "routes": [{ "src": "/(.*)", "dest": "src/api/index.ts" }]
+  "routes": [{ "src": "/(.*)", "dest": "src/server.ts" }]
 }
