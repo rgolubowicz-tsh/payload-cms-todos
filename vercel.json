@@ -2,7 +2,8 @@
   "version": 2,
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api" },
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/admin/(?!.*\\..*$|.*\\.html$)", "destination": "/" },
+    { "source": "/admin/:path", "destination": "/:path" }
   ],
   "outputDirectory": "build"
 }
