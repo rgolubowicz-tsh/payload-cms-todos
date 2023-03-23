@@ -1,16 +1,6 @@
 {
   "version": 2,
-  "rewrites": [
-    {
-      "source": "/admin",
-      "destination": "/"
-    },
-    {
-      "source": "/admin/(.*)",
-      "destination": "/$1"
-    },
-    { "source": "/(.*)", "destination": "/api" }
-  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
   "functions": {
     "api/index.ts": {
       "includeFiles": "build/**"
