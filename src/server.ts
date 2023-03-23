@@ -7,6 +7,7 @@ const app = express();
 
 // Redirect root to Admin panel
 app.get("/", (_, res) => {
+  console.log("somehow here");
   res.redirect("/admin");
 });
 
