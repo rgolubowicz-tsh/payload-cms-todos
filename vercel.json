@@ -2,5 +2,16 @@
   "version": 2,
   "outputDirectory": ".",
   "buildCommand": "yarn build",
-  "installCommand": "yarn install"
+  "installCommand": "yarn install",
+  "functions": {
+    "api/server.ts": {
+      "includeFiles": "build"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/server.ts"
+    }
+  ]
 }
