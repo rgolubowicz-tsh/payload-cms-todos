@@ -1,7 +1,7 @@
 {
   "version": 2,
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api" },
+    { "source": "/api/:path", "destination": "/api/server/:path" },
     { "source": "/admin/:path", "destination": "/:path" }
   ],
   "outputDirectory": "build"
