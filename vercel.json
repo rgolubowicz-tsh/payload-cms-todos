@@ -6,5 +6,9 @@
       "dest": "src/server.ts"
     }
   ],
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
   "outputDirectory": "build"
 }
