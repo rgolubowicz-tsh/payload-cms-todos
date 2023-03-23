@@ -1,5 +1,12 @@
 {
   "version": 2,
-  "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
-  "outputDirectory": "build"
+  "rewrites": [
+    {
+      "source": "/admin/:path",
+      "destination": "/:path"
+    },
+    { "source": "/(.*)", "destination": "/api" }
+  ],
+  "outputDirectory": "build",
+  "buildCommand": "yarn build"
 }
