@@ -6,8 +6,8 @@
       "destination": "/"
     },
     {
-      "source": "/admin/:path",
-      "destination": "/:path"
+      "source": "/admin/(.*)",
+      "destination": "/$1"
     },
     { "source": "/(.*)", "destination": "/api" }
   ],
