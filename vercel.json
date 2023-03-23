@@ -1,25 +1,4 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "dist/server.js"
-    },
-    {
-      "src": "/admin",
-      "dest": "build/index.html"
-    },
-    {
-      "src": "/admin/:path",
-      "dest": "build/:path"
-    },
-    {
-      "src": "/",
-      "dest": "build/index.html"
-    },
-    {
-      "src": "/(.+)",
-      "dest": "build/$1"
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
 }
